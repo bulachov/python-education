@@ -1,5 +1,14 @@
-#Задача для подсчета суммы элементов числа
-
-a = input('введите число')
+import math
+# 1 Задача для подсчета суммы элементов любого числа
+a = input('введите число для 1#: ')
 sum_a = sum(int(i) for i in a if i.isdigit())
 print(sum_a)
+# 2 вход число N и выдает набор произведений чисел от 1 до N
+b = int(input('введите число N: '))
+result_list = list(math.factorial(i) for i in range(1, b + 1))
+print(result_list)
+# 3 Задайте список из n чисел последовательности $(1+\frac 1 n)^n$
+c = int(input('введите число n для $(1+1/n)^n$ : '))
+result_list3 = list((1+1/i)**i for i in range(1, c + 1))
+print(f'sum for 3# = {round(sum(result_list3), 3)}')
+
