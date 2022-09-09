@@ -40,7 +40,7 @@ print(b)
 #5 Задайте число. Составьте список чисел Фибоначчи,
 # в том числе для отрицательных индексов.
 
-fib = int(input('введите число for fib = '))
+fib = int(input('5# введите число for fib = '))
 res_5 = []
 for i in range(fib+1):
     if i==0 or i==1:
@@ -53,6 +53,5 @@ for i in range(fib+1):
         res_fib.append(i)
     else:
         res_fib.append(res_5[i])
-        res_fib.append(-1*res_5[i])
-res_fib.sort()
+        res_fib.insert(0, (-1)**(i-1)*res_5[i])
 print(res_fib)
