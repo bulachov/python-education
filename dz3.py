@@ -43,15 +43,12 @@ print(b)
 fib = int(input('5# введите число for fib = '))
 res_5 = []
 for i in range(fib+1):
-    if i==0 or i==1:
-        res_5.append(i)
-    else:
-        res_5.append(res_5[i-2]+res_5[i-1])
-res_fib = []
-for i in range(fib+1):
     if i==0:
-        res_fib.append(i)
+        res_5.append(i)
+    elif i==1:
+        res_5.append(i)
+        res_5.insert(0, i)
     else:
-        res_fib.append(res_5[i])
-        res_fib.insert(0, (-1)**(i-1)*res_5[i])
-print(res_fib)
+        res_5.append(res_5[len(res_5)-1]+res_5[len(res_5)-2])
+        res_5.insert(0, (-1)**(i-1)*res_5[len(res_5)-1])
+print(res_5)
