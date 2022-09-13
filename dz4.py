@@ -31,8 +31,8 @@ def analys_targ(x, res='') -> str:
             count += 1
         return res
 
-
-print(analys_targ(b)[1:])
+list_b = analys_targ(b)[1:].split()
+print(list_b)
 
 # 3 Задайте последовательность чисел. Напишите программу,
 # которая выведет список неповторяющихся
